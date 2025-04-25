@@ -37,6 +37,7 @@
   <style media="screen">
     body {
       display: flex;
+      flex-flow: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -48,11 +49,20 @@
       background-color: #fff;
       border: 1px solid #ccc;
     }
+
+    .rectangle {
+      height: 100px;
+      background-color: rgb(176, 238, 135);
+    }
+
+    input {
+      width: 300px;
+    }
   </style>
 </head>
 
 <body>
-  <canvas id="myCanvas" width="600" height="600"></canvas>
+  <canvas id="myCanvas" width="800" height="800"></canvas>
   <script>
     const canvas = document.getElementById('myCanvas');
     const ctx = canvas.getContext('2d');
@@ -65,7 +75,12 @@
         ctx.strokeRect(i * squareSize, j * squareSize, squareSize, squareSize);
       }
     }
+
   </script>
+  <div class="rectangel">
+  </div>
+  <div class="rectangel">
+  </div>
   <div>
     <input type="button" value="Click me"></input>
   </div>
