@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "mysketching",
     "public": "public",
     "ignore": [
       "firebase.json",
