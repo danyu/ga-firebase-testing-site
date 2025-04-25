@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.15.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.15.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-performance-compat.js"></script>
-    <!-- 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Firebase Hosting</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/9.15.0/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/9.15.0/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-performance-compat.js"></script>
+  <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://gtm-ctfe-preprod.corp.google.com/gtag/js?id=G-T714CGBQ73"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-T714CGBQ73');
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://gtm-ctfe-preprod.corp.google.com/gtag/js?id=G-T714CGBQ73"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <style media="screen">
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f0f0f0;
+    gtag('config', 'G-T714CGBQ73');
+  </script>
+
+  <style media="screen">
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    #myCanvas {
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="myCanvas" width="400" height="400"></canvas>
+  <script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    const gridSize = 40; // Number of rows and columns
+    const squareSize = canvas.width / gridSize;
+
+    // Draw the grid
+    for (let i = 0; i < gridSize; i++) {
+      for (let j = 0; j < gridSize; j++) {
+        ctx.strokeRect(i * squareSize, j * squareSize, squareSize, squareSize);
       }
-      #myCanvas {
-        background-color: #fff;
-        border: 1px solid #ccc;
-      }
-    </style>
-  </head>
-  <body>
-    <canvas id="myCanvas" width="400" height="400"></canvas>
-    <script>
-      const canvas = document.getElementById('myCanvas');
-      const ctx = canvas.getContext('2d');
-      const gridSize = 20; // Number of rows and columns
-      const squareSize = canvas.width / gridSize;
-  
-      // Draw the grid
-      for (let i = 0; i < gridSize; i++) {
-        for (let j = 0; j < gridSize; j++) {
-          ctx.strokeRect(i * squareSize, j * squareSize, squareSize, squareSize);
-        }
-      }
-    </script>
-    <div>
-      <input type="button" value="Click me"></input>
-    </div>
-  </body>
+    }
+  </script>
+  <div>
+    <input type="button" value="Click me"></input>
+  </div>
+</body>
+
 </html>
