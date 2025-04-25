@@ -1,0 +1,46 @@
+[debug] [2025-04-25T06:11:16.032Z] ----------------------------------------------------------------------
+[debug] [2025-04-25T06:11:16.033Z] Command:       /usr/local/share/nvm/versions/node/v20.12.1/bin/node /usr/local/share/nvm/versions/node/v20.12.1/bin/firebase init
+[debug] [2025-04-25T06:11:16.034Z] CLI Version:   14.2.1
+[debug] [2025-04-25T06:11:16.034Z] Platform:      linux
+[debug] [2025-04-25T06:11:16.034Z] Node Version:  v20.12.1
+[debug] [2025-04-25T06:11:16.034Z] Time:          Fri Apr 25 2025 06:11:16 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-04-25T06:11:16.034Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-25T06:11:16.206Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-25T06:11:16.206Z] > authorizing via signed-in user (danyuyou@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /project/workspace
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-04-25T06:11:25.101Z] Using project from CLI flag: mysketching
+[debug] [2025-04-25T06:11:25.102Z] Checked if tokens are valid: true, expires at: 1745564972841
+[debug] [2025-04-25T06:11:25.103Z] Checked if tokens are valid: true, expires at: 1745564972841
+[debug] [2025-04-25T06:11:25.104Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mysketching [none]
+[debug] [2025-04-25T06:11:25.426Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mysketching 403
+[debug] [2025-04-25T06:11:25.426Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mysketching {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-04-25T06:11:25.427Z] Request to https://firebase.googleapis.com/v1beta1/projects/mysketching had HTTP Error: 403, The caller does not have permission
+[debug] [2025-04-25T06:11:25.462Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/mysketching had HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/share/nvm/versions/node/v20.12.1/lib/node_modules/firebase-tools/lib/responseToError.js:52:12)
+    at RetryOperation._fn (/usr/local/share/nvm/versions/node/v20.12.1/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project mysketching. Please make sure the project exists and your account has permission to access it.
